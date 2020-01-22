@@ -9,16 +9,24 @@ export const selectMajor = (major) => {
     };
 };
 
-export const selectSubject = (subject) => {
+export const selectSubject = (title, startDate, endDate) => {
     return {
         type: SUBJECT_SELECTED,
-        payload: subject
+        payload: {
+            title,
+            startDate,
+            endDate
+        }
     };
 };
 
-export const deselectSubject = (subject) => {
+export const deselectSubject = (title, startDate, endDate) => {
     return {
         type: SUBJECT_DESELECTED,
-        payload: subject
+        payload: {
+            title,
+            startDate,
+            endDate
+        }
     };
 };

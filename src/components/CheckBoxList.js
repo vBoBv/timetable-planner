@@ -14,12 +14,12 @@ class CheckBoxList extends Component {
         this.handleChange = this.handleChange.bind(this);
     }
 
-    renderSubjectListState = (target, subject) => {
+    renderSubjectListState = (target, title, startDate, endDate) => {
         return (
             <React.Fragment>
                 {target === true
-                    ? this.props.selectSubject(subject)
-                    : this.props.deselectSubject(subject)}
+                    ? this.props.selectSubject(title, startDate, endDate)
+                    : this.props.deselectSubject(title, startDate, endDate)}
             </React.Fragment>
         );
     };
@@ -34,7 +34,12 @@ class CheckBoxList extends Component {
         this.setState((prevState) => ({
             checkedItems: prevState.checkedItems.set(item, isChecked)
         }));
-        this.renderSubjectListState(e.target.checked, this.props.label);
+        this.renderSubjectListState(
+            e.target.checked,
+            this.props.label,
+            this.props.startDate,
+            this.props.endDate
+        );
     }
 
     render() {

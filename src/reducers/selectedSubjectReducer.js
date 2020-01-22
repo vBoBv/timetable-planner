@@ -6,13 +6,13 @@ const selectedSubjectReducer = (selectedSubject = [], action) => {
         case SUBJECT_SELECTED:
             return [
                 ...selectedSubject.filter(
-                    (subject) => subject !== action.payload
+                    (subject) => subject.title !== action.payload.title
                 ),
                 action.payload
             ];
         case SUBJECT_DESELECTED:
             return selectedSubject.filter(
-                (subject) => subject !== action.payload
+                (subject) => subject.title !== action.payload.title
             );
         default:
             return selectedSubject;

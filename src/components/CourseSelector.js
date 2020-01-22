@@ -60,6 +60,7 @@ class CourseSelector extends Component {
                         {major.majorTitle === this.state.major ? (
                             <div>
                                 {major.courseList.map((course) => {
+                                    // console.log(course);
                                     return (
                                         // <div key={course.id}>
                                         //     <input
@@ -97,6 +98,8 @@ class CourseSelector extends Component {
                                             //     );
                                             // }}
                                             label={course.title}
+                                            startDate={course.startDate}
+                                            endDate={course.endDate}
                                         />
                                     );
                                 })}
