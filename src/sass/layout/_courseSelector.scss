@@ -3,6 +3,12 @@
     margin-top: 5rem;
     padding: 2rem;
 
+    @include respond(phone) {
+        margin-top: 2rem;
+
+        grid-column: full-start / full-end;
+    }
+
     display: grid;
     grid-template-rows: max-content 1fr;
 

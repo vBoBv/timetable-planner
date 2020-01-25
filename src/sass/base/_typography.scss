@@ -9,6 +9,16 @@ body {
 %heading {
     font-family: $font-display;
     font-weight: 400;
+
+    @include respond(tab-port) {
+        //900px
+        font-size: 3.5rem;
+    }
+
+    @include respond(phone) {
+        //600px
+        font-size: 3rem;
+    }
 }
 
 .heading-1 {

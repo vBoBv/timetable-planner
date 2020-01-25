@@ -2,4 +2,9 @@
     grid-column: col-start 3 / full-end;
     margin-top: 5rem;
     padding: 1rem;
+
+    @include respond(phone) {
+        margin-top: 1rem;
+        grid-column: full-start / full-end;
+    }
 }

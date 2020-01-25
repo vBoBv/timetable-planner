@@ -1,7 +1,7 @@
 .container {
     display: grid;
 
-    grid-template-rows: 90vh repeat(2, 1fr);
+    grid-template-rows: 90vh repeat(3, 1fr);
     grid-template-columns:
         [full-start] minmax(6rem, 1fr)
         [center-start] repeat(
