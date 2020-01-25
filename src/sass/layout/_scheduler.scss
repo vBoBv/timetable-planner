@@ -1,3 +1,5 @@
 .scheduler {
-    grid-column: full-start / full-end;
+    grid-column: col-start 3 / full-end;
+    margin-top: 5rem;
+    padding: 1rem;
 }

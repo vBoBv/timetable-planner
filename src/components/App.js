@@ -4,6 +4,7 @@ import "../sass/App.scss";
 import Header from "./Header";
 import CourseSelector from "./CourseSelector";
 import Timetable from "./Timetable";
+import Footer from "./Footer";
 
 const App = () => {
     return (
@@ -11,6 +12,7 @@ const App = () => {
             <Header />
             <CourseSelector />
             <Timetable />
+            <Footer />
         </div>
     );
 };

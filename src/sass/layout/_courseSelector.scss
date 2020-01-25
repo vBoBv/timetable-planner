@@ -1,3 +1,38 @@
 .courseSelector {
-    grid-column: full-start / full-end;
+    grid-column: full-start / col-end 2;
+    margin-top: 5rem;
+    padding: 2rem;
+
+    display: grid;
+    grid-template-rows: max-content 1fr;
+
+    &__heading {
+        text-align: center;
+        margin-bottom: 2px;
+    }
+
+    &__selectbox {
+        margin-bottom: 1rem;
+        width: 100%;
+    }
+
+    &__checkboxList {
+    }
+
+    &__checkbox {
+        margin-bottom: 1rem;
+    }
+
+    &__checkboxElement {
+        display: grid;
+    }
+}
+
+select.ui.dropdown {
+    height: 65px;
+}
+
+.ui.checkbox .box,
+.ui.checkbox label {
+    font-size: 1.4rem;
 }

@@ -10,7 +10,7 @@ const Checkbox = ({
     label = ""
 }) => {
     return (
-        <div key={id}>
+        <div className='ui checkbox courseSelector__checkbox' key={id}>
             <input
                 type={type}
                 name={name}
