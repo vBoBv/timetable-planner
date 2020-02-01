@@ -1,5 +1,6 @@
 import { SUBJECT_SELECTED } from "../actions/types";
 import { SUBJECT_DESELECTED } from "../actions/types";
+import { RESET_SUBJECT_SELECTED } from "../actions/types";
 
 const selectedSubjectReducer = (selectedSubject = [], action) => {
     switch (action.type) {
@@ -14,6 +15,8 @@ const selectedSubjectReducer = (selectedSubject = [], action) => {
             return selectedSubject.filter(
                 (subject) => subject.title !== action.payload.title
             );
+        case RESET_SUBJECT_SELECTED:
+            return [];
         default:
             return selectedSubject;
     }

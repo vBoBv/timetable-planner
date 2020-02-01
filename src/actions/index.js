@@ -1,6 +1,7 @@
 import { MAJOR_SELECTED } from "./types";
 import { SUBJECT_SELECTED } from "./types";
 import { SUBJECT_DESELECTED } from "./types";
+import { RESET_SUBJECT_SELECTED } from "./types";
 
 export const selectMajor = (major) => {
     return {
@@ -9,24 +10,32 @@ export const selectMajor = (major) => {
     };
 };
 
-export const selectSubject = (title, startDate, endDate) => {
+export const selectSubject = (title, startDate, endDate, rRule) => {
     return {
         type: SUBJECT_SELECTED,
         payload: {
             title,
             startDate,
-            endDate
+            endDate,
+            rRule
         }
     };
 };
 
-export const deselectSubject = (title, startDate, endDate) => {
+export const deselectSubject = (title, startDate, endDate, rRule) => {
     return {
         type: SUBJECT_DESELECTED,
         payload: {
             title,
             startDate,
-            endDate
+            endDate,
+            rRule
         }
+    };
+};
+
+export const resetSubject = () => {
+    return {
+        type: RESET_SUBJECT_SELECTED
     };
 };

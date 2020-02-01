@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { connect } from "react-redux";
 import CheckBoxList from "./CheckBoxList";
 import SubjectSelectionQuery from "./SubjectSelectionQuery";
+import { resetSubject } from "../actions";
 
 class CourseSelector extends Component {
     state = {
@@ -11,7 +12,11 @@ class CourseSelector extends Component {
     };
 
     handleSelect = (event) => {
+        // if (this.state.major === "Select a major") { //Reset only if Select major selected
+        //     this.props.resetSubject();
+        // }
         this.setState({ major: event.target.value });
+        this.props.resetSubject(); //Always reset when student change their major selection
     };
 
     renderMajorSelectionBox() {
@@ -55,7 +60,10 @@ class CourseSelector extends Component {
                 <div className='courseSelector__checkboxList'>
                     {major.levelList.map((course) => {
                         return (
-                            <div className='courseSelector__checkboxElement'>
+                            <div
+                                className='courseSelector__checkboxElement'
+                                key={course.category}
+                            >
                                 <h3>{course.category}</h3>
                                 {course.courseList.map((subject) => {
                                     return (
@@ -65,6 +73,7 @@ class CourseSelector extends Component {
                                             label={subject.title}
                                             startDate={subject.startDate}
                                             endDate={subject.endDate}
+                                            rRule={subject.rRule}
                                         />
                                     );
                                 })}
@@ -115,4 +124,4 @@ const mapStateToProps = (state) => {
     };
 };
 
-export default connect(mapStateToProps)(CourseSelector);
+export default connect(mapStateToProps, { resetSubject })(CourseSelector);
