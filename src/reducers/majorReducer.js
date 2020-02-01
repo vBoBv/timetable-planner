@@ -25,10 +25,15 @@ const majorReducer = () => {
                         {
                             id: "ISCG5420",
                             title: "ISCG5420 Programming Fundamentals",
+
                             startDate: new Date(2020, 1, 24, 12, 0, 0),
                             endDate: new Date(2020, 1, 24, 13, 0, 0),
+
+                            // startDate1: new Date(2020, 1, 25, 14, 0, 0),
+                            // endDate1: new Date(2020, 1, 25, 15, 0, 0),
                             rRule:
-                                "FREQ=WEEKLY;BYDAY=MO,TU;BYSETPOS=1,4;BYHOUR=12,14;UNTIL=20200603T000000Z"
+                                "FREQ=WEEKLY;BYDAY=MO,TU;BYSETPOS=1,8;BYHOUR=12,14;BYMINUTE=0,30;UNTIL=20200602T000000Z"
+                            // rRule: "FREQ=WEEKLY;UNTIL=20200602T000000Z"
                         },
                         {
                             id: "ISCG5423",
@@ -53,7 +58,7 @@ const majorReducer = () => {
                             startDate: new Date(2020, 1, 24, 13, 30, 0),
                             endDate: new Date(2020, 1, 24, 14, 30, 0),
                             rRule:
-                                "FREQ=WEEKLY;BYDAY=MO,WE;BYSETPOS=1,4;BYHOUR=13,14;BYMINUTE=30;UNTIL=20200610T000000Z"
+                                "FREQ=WEEKLY;BYDAY=MO,WE;BYSETPOS=1,4;BYHOUR=13,8;BYMINUTE=30;UNTIL=20200610T000000Z"
                         }
                     ]
                 },
@@ -188,8 +193,10 @@ const majorReducer = () => {
                         {
                             id: "ISCG7431",
                             title: "ISCG7431 Capstone Project",
-                            startDate: new Date(2020, 1, 24, 11, 30, 0),
-                            endDate: new Date(2020, 1, 24, 14, 30, 0)
+                            startDate: new Date(2020, 1, 24, 13, 0, 0),
+                            endDate: new Date(2020, 1, 24, 16, 0, 0),
+                            rRule:
+                                "FREQ=WEEKLY;WKST=MO;BYDAY=MO,TH,FR;BYSETPOS=1,8,12;BYHOUR=13,9;BYMINUTE=0,30;UNTIL=20200626T000000Z"
                         }
                     ]
                 },
