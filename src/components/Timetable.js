@@ -10,7 +10,8 @@ import {
     MonthView,
     DayView,
     DateNavigator,
-    TodayButton
+    TodayButton,
+    AppointmentTooltip
 } from "@devexpress/dx-react-scheduler-material-ui";
 import Paper from "@material-ui/core/Paper";
 import { withStyles } from "@material-ui/core/styles";
@@ -19,15 +20,6 @@ import { fade } from "@material-ui/core/styles/colorManipulator";
 import CourseInformation from "./CourseInformation";
 
 const style = (theme) => ({
-    todayCell: {
-        backgroundColor: fade(theme.palette.primary.main, 0.1),
-        "&:hover": {
-            backgroundColor: fade(theme.palette.primary.main, 0.14)
-        },
-        "&:focus": {
-            backgroundColor: fade(theme.palette.primary.main, 0.16)
-        }
-    },
     weekendCell: {
         backgroundColor: fade(theme.palette.action.disabledBackground, 0.04),
         "&:hover": {
@@ -39,17 +31,52 @@ const style = (theme) => ({
     }
 });
 
-const TimeTableCellBase = ({ classes, ...restProps }) => {
+const Appointment = ({ children, style, ...restProps }) => (
+    <Appointments.Appointment
+        {...restProps}
+        style={{
+            ...style,
+            backgroundColor: "#512da8",
+            fontSize: "10px",
+            width: "110%",
+            borderRadius: "0px"
+        }}
+    >
+        {children}
+    </Appointments.Appointment>
+);
+
+const Content = ({ children, style, ...restProps }) => (
+    <AppointmentTooltip.Content
+        {...restProps}
+        style={{
+            ...style,
+            fontSize: "15px"
+        }}
+    >
+        {children}
+    </AppointmentTooltip.Content>
+);
+
+const RecurringIcon = () => {
+    return null;
+};
+
+// const TimeTableCell = ({ children, style, ...restProps }) => (
+//     <WeekView.TimeTableCell
+//         {...restProps}
+//         style={{
+//             ...style,
+//             width: "10rem"
+//         }}
+//     >
+//         {children}
+//     </WeekView.TimeTableCell>
+// );
+
+const TimeTableCellBase = ({ classes, style, ...restProps }) => {
     const { startDate } = restProps;
     const date = new Date(startDate);
-    if (date.getDate() === new Date().getDate()) {
-        return (
-            <WeekView.TimeTableCell
-                {...restProps}
-                className={classes.todayCell}
-            />
-        );
-    }
     if (date.getDay() === 0 || date.getDay() === 6) {
         return (
             <WeekView.TimeTableCell
@@ -65,20 +92,44 @@ const TimeTableCell = withStyles(style, { name: "TimeTableCell" })(
     TimeTableCellBase
 );
 
-const TimeScaleLabel = (props) => {
-    return <WeekView.TimeScaleLabel {...props} style={{ fontSize: "15px" }} />;
-};
+const TimeTableRow = ({ children, style, ...restProps }) => (
+    <WeekView.TimeTableRow
+        {...restProps}
+        style={{
+            ...style
+            // height: "10rem"
+        }}
+    >
+        {children}
+    </WeekView.TimeTableRow>
+);
 
-// const DayScaleCell = (props) => (
-//     <WeekView.DayScaleCell
-//         {...props}
-//         style={{ textAlign: "center", fontWeight: "bold" }}
-//     />
-// );
+const TimeScaleLayout = ({ children, style, ...restProps }) => (
+    <WeekView.TimeScaleLayout
+        {...restProps}
+        style={{
+            ...style
+        }}
+    >
+        {children}
+    </WeekView.TimeScaleLayout>
+);
+
+const DayScaleCell = ({ children, style, ...restProps }) => (
+    <WeekView.DayScaleCell
+        {...restProps}
+        style={{
+            ...style,
+            width: "10rem"
+        }}
+    >
+        {children}
+    </WeekView.DayScaleCell>
+);
 
 class Timetable extends Component {
     state = {
-        currentViewName: "Week",
+        currentViewName: "week-days",
         currentDate: "2020-02-28"
     };
 
@@ -98,7 +149,7 @@ class Timetable extends Component {
 
         return (
             <Paper className='scheduler'>
-                <Scheduler data={this.props.selectedSubject} height={660}>
+                <Scheduler data={this.props.selectedSubject} height={800}>
                     <ViewState
                         currentViewName={currentViewName}
                         currentDate={currentDate}
@@ -111,8 +162,20 @@ class Timetable extends Component {
                         startDayHour={8}
                         endDayHour={22}
                         timeTableCellComponent={TimeTableCell}
-                        timeScaleLabelComponent={TimeScaleLabel}
-                        // dayScaleCellComponent={DayScaleCell}
+                        timeTableRowComponent={TimeTableRow}
+                        dayScaleCellComponent={DayScaleCell}
+                        timeScaleLayoutComponent={TimeScaleLayout}
+                    />
+                    <WeekView
+                        name='week-days'
+                        displayName='Week Days'
+                        excludedDays={[0, 6]}
+                        startDayHour={8}
+                        endDayHour={22}
+                        timeTableCellComponent={TimeTableCell}
+                        timeTableRowComponent={TimeTableRow}
+                        dayScaleCellComponent={DayScaleCell}
+                        timeScaleLayoutComponent={TimeScaleLayout}
                     />
                     <MonthView />
 
@@ -120,7 +183,12 @@ class Timetable extends Component {
                     <ViewSwitcher />
                     <DateNavigator />
                     <TodayButton />
-                    <Appointments />
+                    <Appointments appointmentComponent={Appointment} />
+                    <AppointmentTooltip
+                        showCloseButton
+                        contentComponent={Content}
+                        recurringIconComponent={RecurringIcon}
+                    />
                 </Scheduler>
                 <CourseInformation />
             </Paper>
