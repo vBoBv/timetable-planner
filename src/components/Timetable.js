@@ -18,6 +18,7 @@ import { withStyles } from "@material-ui/core/styles";
 import { fade } from "@material-ui/core/styles/colorManipulator";
 
 import CourseInformation from "./CourseInformation";
+import CourseInfoToPrint from "./CourseInfoToPrint";
 
 const style = (theme) => ({
     weekendCell: {
@@ -38,7 +39,8 @@ const Appointment = ({ children, style, ...restProps }) => (
             ...style,
             backgroundColor: "#512da8",
             fontSize: "10px",
-            width: "110%",
+            width: "105%",
+            border: "1px solid white",
             borderRadius: "0px"
         }}
     >
@@ -191,6 +193,7 @@ class Timetable extends Component {
                     />
                 </Scheduler>
                 <CourseInformation />
+                <CourseInfoToPrint />
             </Paper>
         );
     }

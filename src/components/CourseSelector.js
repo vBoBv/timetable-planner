@@ -12,7 +12,7 @@ class CourseSelector extends Component {
     };
 
     handleSelect = (event) => {
-        // if (this.state.major === "Select a major") { //Reset only if Select major selected
+        // if (this.state.major === "Select a major") { //Reset only if 'Select major' selected
         //     this.props.resetSubject();
         // }
         this.setState({ major: event.target.value });

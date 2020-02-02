@@ -19,7 +19,10 @@ class CourseInformation extends Component {
                     <div className='item'>
                         <i className='large check middle aligned icon'></i>
                         <div className='content'>
-                            <h3 className='header'>{subject.title}</h3>
+                            <h3 className='header'>
+                                {subject.title}
+                                {subject.startDate.toString()}
+                            </h3>
                             <div className='description'>
                                 Pre-requisite(s): {subject.preReq}
                             </div>
