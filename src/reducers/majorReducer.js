@@ -104,6 +104,7 @@ const majorReducer = () => {
                         {
                             id: "ISCG6411",
                             title: "ISCG6411 Project Planning and Control",
+                            preReq: "ISCG5424 Information Systems Concepts",
                             startDate: new Date(2020, 1, 28, 14, 30, 0),
                             endDate: new Date(2020, 1, 28, 17, 30, 0),
                             rRule: "FREQ=WEEKLY;UNTIL=20200605T000000Z"
@@ -290,6 +291,7 @@ const majorReducer = () => {
                             id: "ISCG7413",
                             title:
                                 "ISCG7413 Testing and Quality Assurance Mangement",
+                            preReq: "None",
                             startDate: new Date(2020, 1, 27, 14, 30, 0),
                             endDate: new Date(2020, 1, 27, 17, 30, 0),
                             rRule: "FREQ=WEEKLY;UNTIL=20200604T000000Z"

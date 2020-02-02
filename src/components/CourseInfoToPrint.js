@@ -16,7 +16,7 @@ class CourseInfoToPrint extends Component {
                 <ReactToPrint
                     trigger={() => (
                         <button className='ui violet basic button'>
-                            <h4>Print this out!</h4>
+                            <h3>Print this out!</h3>
                         </button>
                     )}
                     content={() => this.componentRef}
