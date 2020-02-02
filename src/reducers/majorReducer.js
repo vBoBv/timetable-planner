@@ -9,6 +9,7 @@ const majorReducer = () => {
                         {
                             id: "ISCG5400",
                             title: "ISCG5400 Hardware Fundamentals",
+                            preReq: "None",
                             startDate: new Date(2020, 1, 25, 11, 30, 0),
                             endDate: new Date(2020, 1, 25, 13, 30, 0),
                             rRule:
@@ -17,6 +18,7 @@ const majorReducer = () => {
                         {
                             id: "ISCG5401",
                             title: "ISCG5401 Operating System Fundamentals",
+                            preReq: "None",
                             startDate: new Date(2020, 1, 24, 15, 0, 0),
                             endDate: new Date(2020, 1, 24, 17, 0, 0),
                             rRule:
@@ -25,7 +27,7 @@ const majorReducer = () => {
                         {
                             id: "ISCG5420",
                             title: "ISCG5420 Programming Fundamentals",
-
+                            preReq: "None",
                             startDate: new Date(2020, 1, 24, 12, 0, 0),
                             endDate: new Date(2020, 1, 24, 13, 0, 0),
 
@@ -38,6 +40,7 @@ const majorReducer = () => {
                         {
                             id: "ISCG5423",
                             title: "ISCG5423 Introduction to Databases",
+                            preReq: "None",
                             startDate: new Date(2020, 1, 25, 11, 30, 0),
                             endDate: new Date(2020, 1, 25, 13, 30, 0),
                             rRule:
@@ -46,6 +49,7 @@ const majorReducer = () => {
                         {
                             id: "ISCG5424",
                             title: "ISCG5424 Information Systems Concepts",
+                            preReq: "None",
                             startDate: new Date(2020, 1, 25, 9, 0, 0),
                             endDate: new Date(2020, 1, 25, 11, 0, 0),
                             rRule:
@@ -55,6 +59,7 @@ const majorReducer = () => {
                             id: "ISCG5430",
                             title:
                                 "ISCG64113 Professional Skills for IT Practitioners",
+                            preReq: "None",
                             startDate: new Date(2020, 1, 24, 13, 30, 0),
                             endDate: new Date(2020, 1, 24, 14, 30, 0),
                             rRule:
@@ -68,6 +73,7 @@ const majorReducer = () => {
                         {
                             id: "HTCS5700",
                             title: "HTCS5700 Cyber Security Principles",
+                            preReq: "None",
                             startDate: new Date(2020, 1, 27, 17, 30, 0),
                             endDate: new Date(2020, 1, 27, 20, 30, 0),
                             rRule: "FREQ=WEEKLY;UNTIL=20200625T000000Z"
@@ -75,6 +81,7 @@ const majorReducer = () => {
                         {
                             id: "ISCG5403",
                             title: "ISCG5403 Networking Fundamentals",
+                            preReq: "None",
                             startDate: new Date(2020, 1, 27, 12, 0, 0),
                             endDate: new Date(2020, 1, 24, 14, 0, 0),
                             rRule: "FREQ=WEEKLY;UNTIL=20200604T000000Z"
@@ -83,6 +90,7 @@ const majorReducer = () => {
                             id: "ISCG5421",
                             title:
                                 "ISCG5421 Programming Principles and Practice",
+                            preReq: "ISCG5420 Programming Fundamentals",
                             startDate: new Date(2020, 1, 25, 14, 30, 0),
                             endDate: new Date(2020, 1, 25, 16, 30, 0),
                             rRule:
@@ -108,6 +116,7 @@ const majorReducer = () => {
                         {
                             id: "ISCG6401",
                             title: "ISCG6401 Data Communications and Networks",
+                            preReq: "ISCG5403 Networking Fundamentals",
                             startDate: new Date(2020, 1, 25, 15, 0, 0),
                             endDate: new Date(2020, 1, 25, 18, 0, 0),
                             rRule: "FREQ=WEEKLY;UNTIL=20200602T000000Z"
@@ -116,6 +125,8 @@ const majorReducer = () => {
                             id: "ISCG6402",
                             title:
                                 "ISCG6402 Network Administration and Support",
+                            preReq:
+                                "ISCG5403 Networking Fundamentals & ISCG5400 Hardware Fundamentals",
                             startDate: new Date(2020, 1, 27, 17, 30, 0),
                             endDate: new Date(2020, 1, 27, 20, 30, 0),
                             rRule: "FREQ=WEEKLY;UNTIL=20200604T000000Z"
@@ -124,6 +135,7 @@ const majorReducer = () => {
                             id: "ISCG6403",
                             title:
                                 "ISCG6403 Network Operating Systems Management",
+                            preReq: "ISCG5401 Operating System Fundamentals",
                             startDate: new Date(2020, 1, 24, 11, 30, 0),
                             endDate: new Date(2020, 1, 24, 14, 30, 0),
                             rRule: "FREQ=WEEKLY;UNTIL=20200601T000000Z"
@@ -132,6 +144,7 @@ const majorReducer = () => {
                             id: "ISCG6407",
                             title:
                                 "ISCG6407 Fundamentals Concepts in Cyber Security",
+                            preReq: "ISCG5403 Networking Fundamentals",
                             startDate: new Date(2020, 1, 26, 15, 0, 0),
                             endDate: new Date(2020, 1, 26, 18, 0, 0),
                             rRule: "FREQ=WEEKLY;UNTIL=20200603T000000Z"
@@ -139,6 +152,8 @@ const majorReducer = () => {
                         {
                             id: "ISCG6414",
                             title: "ISCG6414 Systems Analysis and Design",
+                            preReq:
+                                "ISCG5424 Information Systems Concepts & ISCG5421 Programming Principles and Practice",
                             startDate: new Date(2020, 1, 24, 11, 30, 0),
                             endDate: new Date(2020, 1, 24, 14, 30, 0),
                             rRule: "FREQ=WEEKLY;UNTIL=20200601T000000Z"
@@ -146,6 +161,7 @@ const majorReducer = () => {
                         {
                             id: "ISCG6420",
                             title: "ISCG6420 Internet and Website Development",
+                            preReq: "ISCG5420 Programming Fundamentals",
                             startDate: new Date(2020, 1, 27, 11, 30, 0),
                             endDate: new Date(2020, 1, 27, 14, 30, 0),
                             rRule: "FREQ=WEEKLY;UNTIL=20200604T000000Z"
@@ -153,6 +169,8 @@ const majorReducer = () => {
                         {
                             id: "ISCG6421",
                             title: "ISCG6421 GUI Programming",
+                            preReq:
+                                "ISCG5421 Programming Principles and Practice & ISCG5423 Introduction to Databases",
                             startDate: new Date(2020, 1, 27, 15, 30, 0),
                             endDate: new Date(2020, 1, 27, 18, 30, 0),
                             rRule: "FREQ=WEEKLY;UNTIL=20200604T000000Z"
@@ -160,6 +178,8 @@ const majorReducer = () => {
                         {
                             id: "ISCG6423",
                             title: "ISCG6423 Database Design and Development",
+                            preReq:
+                                "ISCG5421 Programming Principles and Practice & ISCG5423 Introduction to Databases",
                             startDate: new Date(2020, 1, 26, 13, 0, 0),
                             endDate: new Date(2020, 1, 26, 16, 0, 0),
                             rRule: "FREQ=WEEKLY;UNTIL=20200603T000000Z"
@@ -167,6 +187,7 @@ const majorReducer = () => {
                         {
                             id: "ISCG6425",
                             title: "ISCG6425 Data Warehousing",
+                            preReq: "ISCG5423 Introduction to Databases",
                             startDate: new Date(2020, 1, 25, 15, 0, 0),
                             endDate: new Date(2020, 1, 25, 18, 0, 0),
                             rRule: "FREQ=WEEKLY;UNTIL=20200602T000000Z"
@@ -174,6 +195,8 @@ const majorReducer = () => {
                         {
                             id: "ISCG6426",
                             title: "ISCG6426 Data Structures and Alogorithms",
+                            preReq:
+                                "ISCG5421 Programming Principles and Practice",
                             startDate: new Date(2020, 1, 24, 15, 0, 0),
                             endDate: new Date(2020, 1, 24, 18, 0, 0),
                             rRule: "FREQ=WEEKLY;UNTIL=20200601T000000Z"
@@ -193,6 +216,8 @@ const majorReducer = () => {
                         {
                             id: "ISCG7431",
                             title: "ISCG7431 Capstone Project",
+                            preReq:
+                                "ISCG6411 Project Planning and Control & ISCG5420 Programming Fundamentals & ISCG5423 Introduction to Databases & ISCG5424 Information System Concepts & 195 BCS Credits",
                             startDate: new Date(2020, 1, 24, 13, 0, 0),
                             endDate: new Date(2020, 1, 24, 16, 0, 0),
                             rRule:
@@ -206,6 +231,8 @@ const majorReducer = () => {
                         {
                             id: "ISCG7400",
                             title: "ISCG7400 Computer Systems Security",
+                            preReq:
+                                "ISCG6402 Network Administration and Support",
                             startDate: new Date(2020, 1, 28, 17, 30, 0),
                             endDate: new Date(2020, 1, 28, 20, 30, 0),
                             rRule: "FREQ=WEEKLY;UNTIL=20200605T000000Z"
@@ -213,6 +240,7 @@ const majorReducer = () => {
                         {
                             id: "ISCG7401",
                             title: "ISCG7401 Advanced Data Communications",
+                            preReq: "ISCG6401 Data Communication and Networks",
                             startDate: new Date(2020, 1, 25, 11, 0, 0),
                             endDate: new Date(2020, 1, 25, 14, 0, 0),
                             rRule: "FREQ=WEEKLY;UNTIL=20200602T000000Z"
@@ -220,6 +248,8 @@ const majorReducer = () => {
                         {
                             id: "ISCG7402",
                             title: "ISCG7402 Network Design and Implementation",
+                            preReq:
+                                "ISCG6402 Network Administration and Support & ISCG6401 Data Communication and Networks",
                             startDate: new Date(2020, 1, 25, 14, 30, 0),
                             endDate: new Date(2020, 1, 25, 17, 30, 0),
                             rRule: "FREQ=WEEKLY;UNTIL=20200602T000000Z"
@@ -227,6 +257,8 @@ const majorReducer = () => {
                         {
                             id: "ISCG7404",
                             title: "ISCG7404 Computer Forensic Investigations",
+                            preReq:
+                                "ISCG6402 Network Administration and Support & ISCG6401 Data Communication and Networks",
                             startDate: new Date(2020, 1, 29, 8, 30, 0),
                             endDate: new Date(2020, 1, 29, 11, 30, 0),
                             rRule: "FREQ=WEEKLY;UNTIL=20200606T000000Z"
@@ -234,6 +266,8 @@ const majorReducer = () => {
                         {
                             id: "ISCG7407",
                             title: "ISCG7407 Advanced Cyber Security",
+                            preReq:
+                                "ISCG6407 Fundamental Concepts in Cyber Security & ISCG6403 Network Operating System Management",
                             startDate: new Date(2020, 1, 26, 10, 30, 0),
                             endDate: new Date(2020, 1, 26, 13, 30, 0),
                             rRule: "FREQ=WEEKLY;UNTIL=20200603T000000Z"
@@ -270,6 +304,8 @@ const majorReducer = () => {
                         {
                             id: "ISCG7420",
                             title: "ISCG7420 Web Application Development",
+                            preReq:
+                                "ISCG6414 System Analysis and Design & ISCG6421 GUI Programming & ISCG6420 Internet and Website Development",
                             startDate: new Date(2020, 1, 27, 11, 0, 0),
                             endDate: new Date(2020, 1, 27, 14, 0, 0),
                             rRule: "FREQ=WEEKLY;UNTIL=20200604T000000Z"
@@ -277,6 +313,8 @@ const majorReducer = () => {
                         {
                             id: "ISCG7424",
                             title: "ISCG7424 Mobile Software Development",
+                            preReq:
+                                "ISCG6414 System Analysis and Design & ISCG6421 GUI Programming",
                             startDate: new Date(2020, 1, 27, 17, 30, 0),
                             endDate: new Date(2020, 1, 27, 20, 30, 0),
                             rRule: "FREQ=WEEKLY;UNTIL=20200604T000000Z"
@@ -284,6 +322,8 @@ const majorReducer = () => {
                         {
                             id: "ISCG7426",
                             title: "ISCG7426 Data Mining",
+                            preReq:
+                                "ISCG5421 Programming Principles and Practice & ISCG6425 Data Warehousing",
                             startDate: new Date(2020, 1, 24, 11, 0, 0),
                             endDate: new Date(2020, 1, 24, 14, 0, 0),
                             rRule: "FREQ=WEEKLY;UNTIL=20200601T000000Z"
@@ -291,6 +331,7 @@ const majorReducer = () => {
                         {
                             id: "ISCG7427",
                             title: "ISCG7427 Agile and Lean Software Delivery",
+                            preReq: "ISCG6414 System Analysis and Design",
                             startDate: new Date(2020, 1, 26, 14, 30, 0),
                             endDate: new Date(2020, 1, 26, 17, 30, 0),
                             rRule: "FREQ=WEEKLY;UNTIL=20200603T000000Z"
@@ -299,6 +340,8 @@ const majorReducer = () => {
                             id: "ISCG7444",
                             title:
                                 "ISCG7444 Cloud Application Design and Development",
+                            preReq:
+                                "ISCG5421 Programming Principles and Practice or ISCG6420 Internet and Website Development",
                             startDate: new Date(2020, 1, 28, 11, 0, 0),
                             endDate: new Date(2020, 1, 28, 14, 0, 0),
                             rRule: "FREQ=WEEKLY;UNTIL=20200605T000000Z"

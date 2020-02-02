@@ -14,16 +14,30 @@ class CheckBoxList extends Component {
         this.handleChange = this.handleChange.bind(this);
     }
 
-    renderSubjectListState = (target, title, startDate, endDate, rRule) => {
+    renderSubjectListState = (
+        target,
+        title,
+        startDate,
+        endDate,
+        rRule,
+        preReq
+    ) => {
         return (
             <React.Fragment>
                 {target === true
-                    ? this.props.selectSubject(title, startDate, endDate, rRule)
+                    ? this.props.selectSubject(
+                          title,
+                          startDate,
+                          endDate,
+                          rRule,
+                          preReq
+                      )
                     : this.props.deselectSubject(
                           title,
                           startDate,
                           endDate,
-                          rRule
+                          rRule,
+                          preReq
                       )}
             </React.Fragment>
         );
@@ -44,7 +58,8 @@ class CheckBoxList extends Component {
             this.props.label,
             this.props.startDate,
             this.props.endDate,
-            this.props.rRule
+            this.props.rRule,
+            this.props.preReq
         );
     }
 

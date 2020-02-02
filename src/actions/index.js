@@ -10,26 +10,28 @@ export const selectMajor = (major) => {
     };
 };
 
-export const selectSubject = (title, startDate, endDate, rRule) => {
+export const selectSubject = (title, startDate, endDate, rRule, preReq) => {
     return {
         type: SUBJECT_SELECTED,
         payload: {
             title,
             startDate,
             endDate,
-            rRule
+            rRule,
+            preReq
         }
     };
 };
 
-export const deselectSubject = (title, startDate, endDate, rRule) => {
+export const deselectSubject = (title, startDate, endDate, rRule, preReq) => {
     return {
         type: SUBJECT_DESELECTED,
         payload: {
             title,
             startDate,
             endDate,
-            rRule
+            rRule,
+            preReq
         }
     };
 };

@@ -16,6 +16,8 @@ import Paper from "@material-ui/core/Paper";
 import { withStyles } from "@material-ui/core/styles";
 import { fade } from "@material-ui/core/styles/colorManipulator";
 
+import CourseInformation from "./CourseInformation";
+
 const style = (theme) => ({
     todayCell: {
         backgroundColor: fade(theme.palette.primary.main, 0.1),
@@ -120,6 +122,7 @@ class Timetable extends Component {
                     <TodayButton />
                     <Appointments />
                 </Scheduler>
+                <CourseInformation />
             </Paper>
         );
     }
