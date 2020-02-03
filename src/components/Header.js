@@ -110,7 +110,7 @@ const Header = () => {
             <div className='landingHeader__block--9'></div>
             <div className='landingHeader__block--10'>
                 <h1 className='heading-1'>Ngāwari Enrol</h1>
-                <p className='heading-4'>Makes life easier</p>
+                <p className='heading-4'>Enrol once and for all</p>
             </div>
             <div className='landingHeader__block--11'></div>
             <div className='landingHeader__block--12'></div>
