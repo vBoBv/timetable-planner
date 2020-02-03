@@ -109,7 +109,7 @@ const Header = () => {
             <div className='landingHeader__block--8'></div>
             <div className='landingHeader__block--9'></div>
             <div className='landingHeader__block--10'>
-                <h1 className='heading-1'>NgawariEnrol</h1>
+                <h1 className='heading-1'>Ngāwari Enrol</h1>
                 <p className='heading-4'>Makes life easier</p>
             </div>
             <div className='landingHeader__block--11'></div>

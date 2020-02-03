@@ -130,8 +130,8 @@ const DayScaleCell = ({ children, style, ...restProps }) => (
     <WeekView.DayScaleCell
         {...restProps}
         style={{
-            ...style,
-            width: "10rem"
+            ...style
+            // width: "10rem"
         }}
     >
         {children}
