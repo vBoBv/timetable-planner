@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "d00f45ad39342f694ad787e326102d91",
+    "revision": "09b96634b71a121ec7f021342267c8fc",
     "url": "/timetable-planner/index.html"
   },
   {
-    "revision": "fd90a647a0ecababfa17",
+    "revision": "ea2ccb08800ea3ab2f69",
     "url": "/timetable-planner/static/css/main.b7488747.chunk.css"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/timetable-planner/static/js/2.f2f86500.chunk.js.LICENSE"
   },
   {
-    "revision": "fd90a647a0ecababfa17",
-    "url": "/timetable-planner/static/js/main.b5aa0240.chunk.js"
+    "revision": "ea2ccb08800ea3ab2f69",
+    "url": "/timetable-planner/static/js/main.947570ec.chunk.js"
   },
   {
     "revision": "6fae64f552c116df88d7",
