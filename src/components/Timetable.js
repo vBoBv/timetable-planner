@@ -48,15 +48,24 @@ const Appointment = ({ children, style, ...restProps }) => (
     </Appointments.Appointment>
 );
 
-const Content = ({ children, style, ...restProps }) => (
+const Content = ({ children, style, appointmentData, ...restProps }) => (
     <AppointmentTooltip.Content
         {...restProps}
+        appointmentData={appointmentData}
         style={{
             ...style,
             fontSize: "15px"
         }}
     >
-        {children}
+        <div style={{ display: "grid", justifyContent: "end" }}>
+            {children}
+            <span
+                className='ui violet tag label'
+                style={{ fontSize: "1.6rem" }}
+            >
+                Class: {appointmentData.classNo}
+            </span>
+        </div>
     </AppointmentTooltip.Content>
 );
 
@@ -190,6 +199,7 @@ class Timetable extends Component {
                         showCloseButton
                         contentComponent={Content}
                         recurringIconComponent={RecurringIcon}
+                        appointmentData={this.props.selectedSubject}
                     />
                 </Scheduler>
                 <CourseInformation />

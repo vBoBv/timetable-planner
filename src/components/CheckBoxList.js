@@ -20,7 +20,8 @@ class CheckBoxList extends Component {
         startDate,
         endDate,
         rRule,
-        preReq
+        preReq,
+        classNo
     ) => {
         return (
             <React.Fragment>
@@ -30,14 +31,16 @@ class CheckBoxList extends Component {
                           startDate,
                           endDate,
                           rRule,
-                          preReq
+                          preReq,
+                          classNo
                       )
                     : this.props.deselectSubject(
                           title,
                           startDate,
                           endDate,
                           rRule,
-                          preReq
+                          preReq,
+                          classNo
                       )}
             </React.Fragment>
         );
@@ -59,7 +62,8 @@ class CheckBoxList extends Component {
             this.props.startDate,
             this.props.endDate,
             this.props.rRule,
-            this.props.preReq
+            this.props.preReq,
+            this.props.classNo
         );
     }
 

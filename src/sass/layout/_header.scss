@@ -27,7 +27,11 @@
 
     // padding: 3rem;
 
-    background-image: linear-gradient(to bottom right, #fc4a1a, #f7b733);
+    background-image: linear-gradient(
+        to bottom right,
+        $color-primary,
+        $color-secondary-light
+    );
 
     &__block {
         @include respond(desktop) {
@@ -354,8 +358,8 @@
                 &--10 {
                     background-image: linear-gradient(
                         to bottom right,
-                        #673ab7,
-                        #512da8
+                        $color-tertiary-light,
+                        $color-tertiary-dark
                     );
 
                     grid-column: 2 / 8;
@@ -381,7 +385,7 @@
                     p {
                         text-align: center;
                         font-style: italic;
-                        color: #fff;
+                        color: $color-white;
                         animation: moveInRight 1s ease-out;
 
                         @include respond(phone) {

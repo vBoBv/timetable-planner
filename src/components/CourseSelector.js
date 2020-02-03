@@ -75,6 +75,7 @@ class CourseSelector extends Component {
                                             endDate={subject.endDate}
                                             rRule={subject.rRule}
                                             preReq={subject.preReq}
+                                            classNo={subject.classNo}
                                         />
                                     );
                                 })}

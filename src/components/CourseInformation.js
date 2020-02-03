@@ -152,6 +152,11 @@ class CourseInformation extends Component {
                                 {subject.preReq}
                                 <br />
                                 {this.renderSpecialClasstime(subject)}
+                                <br />
+                                <i style={{ color: "#512da8" }}>
+                                    Class Number:
+                                </i>{" "}
+                                {subject.classNo}
                             </div>
                         </div>
                     </div>
