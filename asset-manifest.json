@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/timetable-planner/static/css/main.655bf5ff.chunk.css",
-    "main.js": "/timetable-planner/static/js/main.88ed45d0.chunk.js",
-    "main.js.map": "/timetable-planner/static/js/main.88ed45d0.chunk.js.map",
+    "main.js": "/timetable-planner/static/js/main.81009a84.chunk.js",
+    "main.js.map": "/timetable-planner/static/js/main.81009a84.chunk.js.map",
     "runtime-main.js": "/timetable-planner/static/js/runtime-main.f5a48935.js",
     "runtime-main.js.map": "/timetable-planner/static/js/runtime-main.f5a48935.js.map",
     "static/js/2.f2f86500.chunk.js": "/timetable-planner/static/js/2.f2f86500.chunk.js",
     "static/js/2.f2f86500.chunk.js.map": "/timetable-planner/static/js/2.f2f86500.chunk.js.map",
     "index.html": "/timetable-planner/index.html",
-    "precache-manifest.4da684e774b93b6c43bb87b8977809fd.js": "/timetable-planner/precache-manifest.4da684e774b93b6c43bb87b8977809fd.js",
+    "precache-manifest.c757d62337aa4aba5366560815a37c25.js": "/timetable-planner/precache-manifest.c757d62337aa4aba5366560815a37c25.js",
     "service-worker.js": "/timetable-planner/service-worker.js",
     "static/css/main.655bf5ff.chunk.css.map": "/timetable-planner/static/css/main.655bf5ff.chunk.css.map",
     "static/js/2.f2f86500.chunk.js.LICENSE": "/timetable-planner/static/js/2.f2f86500.chunk.js.LICENSE",
@@ -18,6 +18,6 @@
     "static/js/runtime-main.f5a48935.js",
     "static/js/2.f2f86500.chunk.js",
     "static/css/main.655bf5ff.chunk.css",
-    "static/js/main.88ed45d0.chunk.js"
+    "static/js/main.81009a84.chunk.js"
   ]
 }
