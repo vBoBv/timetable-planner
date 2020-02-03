@@ -1,23 +1,23 @@
 {
   "files": {
-    "main.css": "/timetable-planner/static/css/main.f5abd9df.chunk.css",
-    "main.js": "/timetable-planner/static/js/main.d856d2f3.chunk.js",
-    "main.js.map": "/timetable-planner/static/js/main.d856d2f3.chunk.js.map",
-    "runtime-main.js": "/timetable-planner/static/js/runtime-main.f5a48935.js",
-    "runtime-main.js.map": "/timetable-planner/static/js/runtime-main.f5a48935.js.map",
-    "static/js/2.d976b5f4.chunk.js": "/timetable-planner/static/js/2.d976b5f4.chunk.js",
-    "static/js/2.d976b5f4.chunk.js.map": "/timetable-planner/static/js/2.d976b5f4.chunk.js.map",
-    "index.html": "/timetable-planner/index.html",
-    "precache-manifest.783069f851312dc24014f4e8eb220f30.js": "/timetable-planner/precache-manifest.783069f851312dc24014f4e8eb220f30.js",
-    "service-worker.js": "/timetable-planner/service-worker.js",
-    "static/css/main.f5abd9df.chunk.css.map": "/timetable-planner/static/css/main.f5abd9df.chunk.css.map",
-    "static/js/2.d976b5f4.chunk.js.LICENSE": "/timetable-planner/static/js/2.d976b5f4.chunk.js.LICENSE",
-    "static/media/App.scss": "/timetable-planner/static/media/row-5-col-3.29be6b62.jpg"
+    "main.css": "/static/css/main.673b125e.chunk.css",
+    "main.js": "/static/js/main.d856d2f3.chunk.js",
+    "main.js.map": "/static/js/main.d856d2f3.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.fb9d8b11.js",
+    "runtime-main.js.map": "/static/js/runtime-main.fb9d8b11.js.map",
+    "static/js/2.d976b5f4.chunk.js": "/static/js/2.d976b5f4.chunk.js",
+    "static/js/2.d976b5f4.chunk.js.map": "/static/js/2.d976b5f4.chunk.js.map",
+    "index.html": "/index.html",
+    "precache-manifest.7a856dd710470537378b9b9a06815af0.js": "/precache-manifest.7a856dd710470537378b9b9a06815af0.js",
+    "service-worker.js": "/service-worker.js",
+    "static/css/main.673b125e.chunk.css.map": "/static/css/main.673b125e.chunk.css.map",
+    "static/js/2.d976b5f4.chunk.js.LICENSE": "/static/js/2.d976b5f4.chunk.js.LICENSE",
+    "static/media/App.scss": "/static/media/row-5-col-3.29be6b62.jpg"
   },
   "entrypoints": [
-    "static/js/runtime-main.f5a48935.js",
+    "static/js/runtime-main.fb9d8b11.js",
     "static/js/2.d976b5f4.chunk.js",
-    "static/css/main.f5abd9df.chunk.css",
+    "static/css/main.673b125e.chunk.css",
     "static/js/main.d856d2f3.chunk.js"
   ]
 }
