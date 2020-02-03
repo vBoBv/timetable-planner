@@ -2,7 +2,7 @@
     "name": "ngawari-enrol",
     "version": "0.1.0",
     "private": true,
-    "homepage": "https://vbobv.github.io/timetable-planner",
+    "homepage": "https://ngawarienrol.com",
     "dependencies": {
         "@devexpress/dx-react-core": "^2.4.0",
         "@devexpress/dx-react-scheduler": "^2.4.0",
