@@ -26,7 +26,7 @@ const Navigation = () => {
                     </li>
                     <li className='navigation__item'>
                         <a
-                            href='https://sso.unitec.ac.nz/my.policy'
+                            href='https://cs.unitec.ac.nz/psc/CSLIVE/EMPLOYEE/HRMS/c/SA_LEARNER_SERVICES.SSR_SSENRL_CART.GBL'
                             className='navigation__link'
                         >
                             <span>02</span>Ready to enroll?
