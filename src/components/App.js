@@ -10,7 +10,7 @@ import Footer from "./Footer";
 const App = () => {
     return (
         <div className='container'>
-            <Navigation />
+            {/* <Navigation /> */}
             <Header />
             <CourseSelector />
             <Timetable />
