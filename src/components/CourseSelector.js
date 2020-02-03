@@ -1,8 +1,9 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
+import { resetSubject } from "../actions";
+
 import CheckBoxList from "./CheckBoxList";
 import SubjectSelectionQuery from "./SubjectSelectionQuery";
-import { resetSubject } from "../actions";
 
 class CourseSelector extends Component {
     state = {
@@ -43,20 +44,6 @@ class CourseSelector extends Component {
     renderCheckBox = (major) => {
         if (major.majorTitle === this.state.major) {
             return (
-                // <div className='courseSelector__checkboxList'>
-                //     <h3>Level3</h3>
-                //     {major.courseList.map((course) => {
-                //         return (
-                //             <CheckBoxList
-                //                 key={course.id}
-                //                 checked={this.state.subjectSelected}
-                //                 label={course.title}
-                //                 startDate={course.startDate}
-                //                 endDate={course.endDate}
-                //             />
-                //         );
-                //     })}
-                // </div>
                 <div className='courseSelector__checkboxList'>
                     {major.levelList.map((course) => {
                         return (
@@ -120,7 +107,6 @@ class CourseSelector extends Component {
 }
 
 const mapStateToProps = (state) => {
-    console.log(state);
     return {
         majors: state.majors
     };

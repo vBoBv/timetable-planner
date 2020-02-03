@@ -1,7 +1,8 @@
 import React, { Component } from "react";
 import ReactToPrint from "react-to-print";
-import CourseInformation from "./CourseInformation";
 import { connect } from "react-redux";
+
+import CourseInformation from "./CourseInformation";
 
 class ComponentToPrint extends Component {
     render() {

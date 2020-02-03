@@ -4,6 +4,25 @@ import { connect } from "react-redux";
 var options = { weekday: "long" };
 
 class CourseInformation extends Component {
+    renderClasstime(subject) {
+        return (
+            <React.Fragment>
+                <i style={{ color: "#512da8" }}>Class-time:</i>{" "}
+                {Intl.DateTimeFormat("en-US", options).format(
+                    subject.startDate
+                )}
+                , {subject.startDate.getHours()}:
+                {subject.startDate.getMinutes() === 0
+                    ? "00"
+                    : subject.startDate.getMinutes()}{" "}
+                - {subject.endDate.getHours()}:
+                {subject.endDate.getMinutes() === 0
+                    ? "00"
+                    : subject.endDate.getMinutes()}
+            </React.Fragment>
+        );
+    }
+
     renderSpecialClasstime(subject) {
         if (subject.title === "ISCG5400 Hardware Fundamentals") {
             return (
@@ -103,48 +122,14 @@ class CourseInformation extends Component {
         }
     }
 
-    renderClasstime(subject) {
-        return (
-            <React.Fragment>
-                <i style={{ color: "#512da8" }}>Class-time:</i>{" "}
-                {Intl.DateTimeFormat("en-US", options).format(
-                    subject.startDate
-                )}
-                , {subject.startDate.getHours()}:
-                {subject.startDate.getMinutes() === 0
-                    ? "00"
-                    : subject.startDate.getMinutes()}{" "}
-                - {subject.endDate.getHours()}:
-                {subject.endDate.getMinutes() === 0
-                    ? "00"
-                    : subject.endDate.getMinutes()}
-            </React.Fragment>
-        );
-    }
-
     renderCourseList() {
         return this.props.selectedSubject.map((subject) => {
             return (
-                // <div class='ui inverted segment' key={subject.title}>
-                //     <div class='ui inverted relaxed divided list'>
-                //         <div class='item'>
-                //             <div class='content'>
-                //                 <div class='header1'>{subject.title}</div>
-                //                 Pre-requistie: {subject.preReq}
-                //             </div>
-                //         </div>
-                //     </div>
-                // </div>
                 <div className='ui relaxed divided list' key={subject.title}>
                     <div className='item'>
                         <i className='large check middle aligned icon'></i>
                         <div className='content'>
-                            <h2 className='header'>
-                                {subject.title}
-                                {/* {Intl.DateTimeFormat("en-US", options).format(
-                                    subject.startDate
-                                )} */}
-                            </h2>
+                            <h2 className='header'>{subject.title}</h2>
                             <div className='description'>
                                 <i style={{ color: "#512da8" }}>
                                     Pre-requisite(s):
@@ -195,8 +180,6 @@ class CourseInformation extends Component {
 }
 
 const mapStateToProps = (state) => {
-    console.log(state.selectedSubject);
-
     return {
         selectedSubject: state.selectedSubject
     };

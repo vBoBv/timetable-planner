@@ -73,18 +73,6 @@ const RecurringIcon = () => {
     return null;
 };
 
-// const TimeTableCell = ({ children, style, ...restProps }) => (
-//     <WeekView.TimeTableCell
-//         {...restProps}
-//         style={{
-//             ...style,
-//             width: "10rem"
-//         }}
-//     >
-//         {children}
-//     </WeekView.TimeTableCell>
-// );
-
 const TimeTableCellBase = ({ classes, style, ...restProps }) => {
     const { startDate } = restProps;
     const date = new Date(startDate);
@@ -103,41 +91,6 @@ const TimeTableCell = withStyles(style, { name: "TimeTableCell" })(
     TimeTableCellBase
 );
 
-const TimeTableRow = ({ children, style, ...restProps }) => (
-    <WeekView.TimeTableRow
-        {...restProps}
-        style={{
-            ...style
-            // height: "10rem"
-        }}
-    >
-        {children}
-    </WeekView.TimeTableRow>
-);
-
-const TimeScaleLayout = ({ children, style, ...restProps }) => (
-    <WeekView.TimeScaleLayout
-        {...restProps}
-        style={{
-            ...style
-        }}
-    >
-        {children}
-    </WeekView.TimeScaleLayout>
-);
-
-const DayScaleCell = ({ children, style, ...restProps }) => (
-    <WeekView.DayScaleCell
-        {...restProps}
-        style={{
-            ...style
-            // width: "10rem"
-        }}
-    >
-        {children}
-    </WeekView.DayScaleCell>
-);
-
 class Timetable extends Component {
     state = {
         currentViewName: "week-days",
@@ -153,9 +106,6 @@ class Timetable extends Component {
     };
 
     render() {
-        // console.log(this.state.currentViewName);
-        // console.log(this.state.currentDate);
-
         const { currentViewName, currentDate } = this.state;
 
         return (
@@ -173,9 +123,6 @@ class Timetable extends Component {
                         startDayHour={8}
                         endDayHour={22}
                         timeTableCellComponent={TimeTableCell}
-                        timeTableRowComponent={TimeTableRow}
-                        dayScaleCellComponent={DayScaleCell}
-                        timeScaleLayoutComponent={TimeScaleLayout}
                     />
                     <WeekView
                         name='week-days'
@@ -184,9 +131,6 @@ class Timetable extends Component {
                         startDayHour={8}
                         endDayHour={22}
                         timeTableCellComponent={TimeTableCell}
-                        timeTableRowComponent={TimeTableRow}
-                        dayScaleCellComponent={DayScaleCell}
-                        timeScaleLayoutComponent={TimeScaleLayout}
                     />
                     <MonthView />
 

@@ -1,18 +1,11 @@
 import React, { Component } from "react";
-import Checkbox from "./Checkbox";
 import { selectSubject, deselectSubject } from "../actions";
 import { connect } from "react-redux";
 
+import Checkbox from "./Checkbox";
+
 class CheckBoxList extends Component {
-    constructor(props) {
-        super(props);
-
-        this.state = {
-            checkedItems: new Map()
-        };
-
-        this.handleChange = this.handleChange.bind(this);
-    }
+    state = { checkedItems: new Map() };
 
     renderSubjectListState = (
         target,
@@ -46,11 +39,7 @@ class CheckBoxList extends Component {
         );
     };
 
-    handleChange(e) {
-        // console.log(e.target.name);
-        // console.log(e.target.checked === true);
-        //console.log(this.state.checkedItems === false);
-
+    handleChange = (e) => {
         const item = e.target.name;
         const isChecked = e.target.checked;
         this.setState((prevState) => ({
@@ -65,7 +54,7 @@ class CheckBoxList extends Component {
             this.props.preReq,
             this.props.classNo
         );
-    }
+    };
 
     render() {
         return (
