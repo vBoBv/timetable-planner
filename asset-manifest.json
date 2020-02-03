@@ -1,23 +1,23 @@
 {
   "files": {
-    "main.css": "/timetable-planner/static/css/main.fe331c2f.chunk.css",
-    "main.js": "/timetable-planner/static/js/main.05fc085a.chunk.js",
-    "main.js.map": "/timetable-planner/static/js/main.05fc085a.chunk.js.map",
+    "main.css": "/timetable-planner/static/css/main.b7488747.chunk.css",
+    "main.js": "/timetable-planner/static/js/main.b5aa0240.chunk.js",
+    "main.js.map": "/timetable-planner/static/js/main.b5aa0240.chunk.js.map",
     "runtime-main.js": "/timetable-planner/static/js/runtime-main.f5a48935.js",
     "runtime-main.js.map": "/timetable-planner/static/js/runtime-main.f5a48935.js.map",
     "static/js/2.f2f86500.chunk.js": "/timetable-planner/static/js/2.f2f86500.chunk.js",
     "static/js/2.f2f86500.chunk.js.map": "/timetable-planner/static/js/2.f2f86500.chunk.js.map",
     "index.html": "/timetable-planner/index.html",
-    "precache-manifest.23e9bdb35a2fe4525721e144f3423291.js": "/timetable-planner/precache-manifest.23e9bdb35a2fe4525721e144f3423291.js",
+    "precache-manifest.b45cdea62320ee072e117cbd0e0e30ff.js": "/timetable-planner/precache-manifest.b45cdea62320ee072e117cbd0e0e30ff.js",
     "service-worker.js": "/timetable-planner/service-worker.js",
-    "static/css/main.fe331c2f.chunk.css.map": "/timetable-planner/static/css/main.fe331c2f.chunk.css.map",
+    "static/css/main.b7488747.chunk.css.map": "/timetable-planner/static/css/main.b7488747.chunk.css.map",
     "static/js/2.f2f86500.chunk.js.LICENSE": "/timetable-planner/static/js/2.f2f86500.chunk.js.LICENSE",
     "static/media/App.scss": "/timetable-planner/static/media/row-5-col-3.29be6b62.jpg"
   },
   "entrypoints": [
     "static/js/runtime-main.f5a48935.js",
     "static/js/2.f2f86500.chunk.js",
-    "static/css/main.fe331c2f.chunk.css",
-    "static/js/main.05fc085a.chunk.js"
+    "static/css/main.b7488747.chunk.css",
+    "static/js/main.b5aa0240.chunk.js"
   ]
 }
