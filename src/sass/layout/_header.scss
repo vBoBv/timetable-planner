@@ -144,6 +144,7 @@
                     animation: moveInLeft 1s ease-out;
                     @include respond(tab-port) {
                         letter-spacing: 0.2rem;
+                        padding-top: 1rem;
                     }
 
                     @include respond(phone) {
