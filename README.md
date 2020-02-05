@@ -9,6 +9,7 @@
   <li>React</li>
   <li>Redux</li>
   <li>Sass</li>
+  <li>Grid System</li>
   <li>Scheduler DevExtreme</li>
   <li>React to Print</li>
 </ul>
