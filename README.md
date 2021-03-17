@@ -2,7 +2,7 @@
 <p>A web app to create and manage timetable for courses.</p>
 
 <h2>Website</h2>
-<p>https://www.ngawarienrol.com/</p>
+<p>https://ngawarienrol.netlify.app/</p>
 
 <h2>Dependencies</h2>
 <ul>
